@@ -4,7 +4,7 @@ import pandas as pd
 
 def test_financial_metrics(symbols: list = ["AAPL", "MSFT", "GOOGL"]):
     """
-    TODO
+    
     Test financial metrics calculation for multiple stocks.
     
     Args:
