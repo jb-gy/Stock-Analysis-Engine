@@ -3,6 +3,7 @@ import pandas as pd
 from scipy import stats
 from typing import Dict, Optional
 
+
 class FinancialMetrics:
     """Calculate various financial statistics from stock data."""
     

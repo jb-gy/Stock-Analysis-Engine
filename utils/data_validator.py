@@ -1,13 +1,21 @@
-import pandas as pd
-from data_fetcher import StockDataFetcher
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-def validate_stock_data(symbol: str = "AAPL", sample_size: int = 5) -> None:
+import pandas as pd
+from utils.data_fetcher import StockDataFetcher
+
+
+def validate_stock_data(symbol: str = "AAPL", sample_size: int = 5) -> pd.DataFrame:
     """
     Validate and display a sample of stock data to verify format and content.
     
     Args:
         symbol: Stock symbol to validate (default: AAPL)
         sample_size: Number of rows to display (default: 5)
+        
+    Returns:
+        DataFrame with stock data or None if error
     """
     try:
         # Initialize data fetcher
@@ -40,6 +48,7 @@ def validate_stock_data(symbol: str = "AAPL", sample_size: int = 5) -> None:
     except Exception as e:
         print(f"Error validating data: {str(e)}")
         return None
+
 
 if __name__ == "__main__":
     # Test with Apple stock
