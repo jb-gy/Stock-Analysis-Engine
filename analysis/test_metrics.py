@@ -1,10 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 from utils.data_fetcher import StockDataFetcher
-from financial_metrics import FinancialMetrics
-import pandas as pd
+from analysis.financial_metrics import FinancialMetrics
+
 
 def test_financial_metrics(symbols: list = ["AAPL", "MSFT", "GOOGL"]):
     """
-    
     Test financial metrics calculation for multiple stocks.
     
     Args:
@@ -37,6 +40,7 @@ def test_financial_metrics(symbols: list = ["AAPL", "MSFT", "GOOGL"]):
             
         except Exception as e:
             print(f"Error analyzing {symbol}: {str(e)}")
+
 
 if __name__ == "__main__":
     test_financial_metrics()

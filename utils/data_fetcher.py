@@ -3,6 +3,7 @@ import pandas as pd
 from typing import Optional
 from datetime import datetime, timedelta
 
+
 class StockDataFetcher:
     """Utility class to fetch and process stock data from Yahoo Finance."""
     
